@@ -1,0 +1,8 @@
+node_modules
+.env
+.env.production
+*lock.json
+posts.json
+config.json
+authors.json
+*logs.txt
