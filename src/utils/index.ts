@@ -8,6 +8,7 @@ import {
   CHAT_ID,
   LOGS_FILE,
   ALGORITHM,
+  AVATAR_REGEXP,
   USERNAME_REGEXP,
   PASSWORD_REGEXP,
 } from '../constants'
@@ -151,8 +152,18 @@ export async function verifyPassword({
   }
 }
 
-export function authorDataValidation(author: string, password: string) {
+export function authorDataValidation({
+  author,
+  password,
+  avatar,
+}: {
+  author: string
+  password: string
+  avatar?: string
+}) {
   return Boolean(
-    author.match(USERNAME_REGEXP) && password.match(PASSWORD_REGEXP)
+    author.match(USERNAME_REGEXP) &&
+      password.match(PASSWORD_REGEXP) &&
+      (!avatar || avatar.match(AVATAR_REGEXP))
   )
 }

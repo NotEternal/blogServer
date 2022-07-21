@@ -87,7 +87,7 @@ AUTHORS_METHODS_DISABLED=[]
 - [ ] disable methods and endpoints depending on `.env` config
 - [ ] allow only an unique nicknames
 - [ ] "update password" route
-- [ ] avatar validation
+- [x] avatar validation
 - [ ] improve validation for all client values
 - [ ] add salt in hash generation
 - [ ] fix `argon2` work

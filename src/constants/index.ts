@@ -28,6 +28,8 @@ export enum ALGORITHM {
   sha512,
 }
 
+export const AVATAR_REGEXP =
+  /^http(s)?\:\/\/[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9](?:\.[a-zA-Z]{2,})+\/[a-zA-Z0-9]+\.(png|jpeg|svg)$/
 export const USERNAME_REGEXP = /^[a-zA-Z0-9\-_]{2,120}$/
 export const PASSWORD_REGEXP =
   /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\-+!@?#_$%^&*]).{8,}$/

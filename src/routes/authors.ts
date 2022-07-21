@@ -25,7 +25,7 @@ router.post(
   ) => {
     const { author = '', password = '', avatar = '' } = req.body
 
-    if (authorDataValidation(author, password)) {
+    if (authorDataValidation({ author, password, avatar })) {
       const authorsHash = authorsDB.hash(author, false)
 
       if (
