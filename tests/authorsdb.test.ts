@@ -14,8 +14,10 @@ describe('Authors database', () => {
   })
 
   it('should validate authors data', () => {
-    expect(authorDataValidation(name, pass)).toBeTruthy()
-    expect(authorDataValidation(invalidName, invalidPass)).toBeFalsy()
+    expect(authorDataValidation({ author: name, password: pass })).toBeTruthy()
+    expect(
+      authorDataValidation({ author: invalidName, password: invalidPass })
+    ).toBeFalsy()
   })
 
   it('should not get author', () => {

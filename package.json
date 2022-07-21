@@ -24,6 +24,7 @@
     "hasha": "^5.2.2",
     "helmet": "^5.1.0",
     "node-json-db": "^1.6.0",
+    "pg": "^8.7.3",
     "rate-limiter-flexible": "^2.3.7"
   },
   "devDependencies": {
